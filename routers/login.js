@@ -4,16 +4,10 @@ const express = require('express');
 const router = express.Router();
 
 // GET /login
-router.get('/', (req, res) => {
-    require('./auth/checkauth').checkAuth(req, res);
-    
-    res.render('login');
-});
+router.get('/', require('../controllers/login/GET'));
 
 // POST /login
-router.post('/', (req, res) => {
-
-});
+router.post('/', require('../controllers/login/POST'));
 
 // Export the router
 module.exports = router;
