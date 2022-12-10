@@ -1,0 +1,10 @@
+mixin msg(type, text)
+    .msg
+        if type == 'success'
+            p.msg__success= text
+        else if type == 'error'
+            p.msg__error= text
+        else if type == 'warning'
+            p.msg__warning= text
+        else if type == 'info'
+            p.msg__info= text

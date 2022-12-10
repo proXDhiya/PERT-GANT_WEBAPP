@@ -1,0 +1,13 @@
+mixin header(auth, user=null, list=null)
+    header
+        nav.desktop-nav
+            .container 
+                if auth
+                    .auth 
+                        a(href="/").logo VueChart
+                
+                if !auth
+                    .non-auth
+                        a(href="/").logo VueChart
+                        for item in list
+                            a(href=item.link)= item.name

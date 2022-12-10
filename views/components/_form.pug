@@ -1,0 +1,15 @@
+mixin form(method='GET', action, title, subTitle, argc)
+    form(method=method, action=action).form
+        h2= title
+        p= subTitle
+        each arg in argc || []
+            if arg.type == 'input'
+                .form__group
+                    label(for=arg.name)= arg.label
+                    input(type=arg.inputType, name=arg.name, id=arg.name, placeholder=arg.placeholder, required=arg.required)
+            else if arg.type == 'textarea'
+                .form__group
+                    label(for=arg.name)= arg.label
+                    textarea(name=arg.name, id=arg.name, placeholder=arg.placeholder, required=arg.required)
+        .form__group
+            button(type='submit').btn.form-btn Submit

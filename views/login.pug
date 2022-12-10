@@ -1,0 +1,38 @@
+include ./components/_head
+include ./components/_header
+include ./components/_form
+include ./components/_msg
+
+//- head implimentation
++head('Login', '/css/main.css', '/css/login.css')
+body 
+    //- header implementation
+    - listHeader = [{name: 'Register', link: '/register'}]
+    +header(false, null, listHeader)
+
+    //- login form
+    section
+        .container
+            +form('POST', '/', 'Login', 'Login to your account', [
+                {
+                    type: 'input',
+                    inputType: 'text',
+                    name: 'username',
+                    label: 'Username',
+                    placeholder: 'Enter your username',
+                    required: true
+                },
+                {
+                    type: 'input',
+                    inputType: 'password',
+                    name: 'password',
+                    label: 'Password',
+                    placeholder: 'Enter your password',
+                    required: true
+                }
+            ])
+
+
+    //- if error
+    if error
+        +msg('error', error)

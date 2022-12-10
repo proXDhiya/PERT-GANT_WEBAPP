@@ -34,6 +34,7 @@ app.use(session({
 }));
 
 // Configure routes
+app.use('/', require('./routers/login'));
 
 
 // Start the server
