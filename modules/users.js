@@ -13,6 +13,20 @@ exports.checkAuth = (username, password) => {
     if (user) {
         const match = bcrypt.compareSync(password, user.password);
         if (match) {
+            // return user;
+
+            // update createDate format
+            user.dateCreation = new Date(user.dateCreation).toLocaleDateString();
+
+            // update lastLogin
+            user.lastLogin = new Date().toLocaleString();
+
+            // update user in json file
+            fs.writeFileSync(path.join(__dirname, '../database/users.json'), JSON.stringify(users, null, 2));
+
+            // delete password from user object
+            delete user.password;
+
             return user;
         }
     }
