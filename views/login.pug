@@ -1,0 +1,11 @@
+include ./components/_head
+include ./components/_header
+
+//- head implimentation
++head('Login', '/css/main.css', '/css/login.css')
+body 
+    //- header implementation
+    - list = [{name: 'Register', link: '/register'}]
+    +header(false, null, list)
+
+    //- login form
