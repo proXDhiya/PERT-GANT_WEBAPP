@@ -264,7 +264,7 @@
 }
 
 
-.options > ion-icon {
+.options ion-icon {
     font-size: 1.4rem;
     cursor: pointer;
     margin-left: var(--spacing-3);
@@ -275,12 +275,12 @@
 }
 
 
-.options > ion-icon:nth-child(1) {
+.options > a > ion-icon:nth-child(1) {
     background-color: #2dabd2;
 }
 
 
-.options > ion-icon:nth-child(1):hover {
+.options > a > ion-icon:nth-child(1):hover {
     background-color: #77cee8;
     color: #1761ac;
 }

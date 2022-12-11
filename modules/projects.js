@@ -54,3 +54,20 @@ exports.getProjectsByUser = (username) => {
 
     return filteredProjects;
 };
+
+
+exports.getProjectById = (id) => {
+    // get projects from file
+    const projects = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/projects.json'), 'utf8'));
+
+    // filter projects by id
+    const filteredProjects = projects.filter(project => project.id == id);
+
+    // if project not found
+    if (filteredProjects.length === 0) {
+        return null;
+    }
+
+    // else, return project
+    return filteredProjects[0];
+};
