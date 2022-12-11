@@ -6,7 +6,7 @@ exports.addNewProject = (username, name, desc, type) => {
         projectOwner: username,
         projectName: name,
         projectDescription: desc,
-        projectType: type === 1 ? 'web' : type === 2 ? 'mobile' : 'desktop',
+        projectType: type === '1' ? 'web' : type === '2' ? 'mobile' : 'desktop',
     }
 
     // get projects from file
@@ -22,8 +22,9 @@ exports.addNewProject = (username, name, desc, type) => {
         project.id = projects[projects.length - 1].id + 1;
     }
 
-    // last update
-    project.lastUpdate = Date.now();
+    // last update time format
+    const lastUpdate = new Date();
+    project.lastUpdate = lastUpdate.getFullYear() + '-' + (lastUpdate.getMonth() + 1) + '-' + lastUpdate.getDate() + ' ' + lastUpdate.getHours() + ':' + lastUpdate.getMinutes() + ':' + lastUpdate.getSeconds();
 
     // push project to projects
     projects.push(project);
@@ -32,4 +33,24 @@ exports.addNewProject = (username, name, desc, type) => {
     fs.writeFileSync(path.join(__dirname, '../database/projects.json'), JSON.stringify(projects, null, 4));
 
     return true;
+};
+
+
+exports.getProjectsByUser = (username) => {
+    // get projects from file
+    const projects = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/projects.json'), 'utf8'));
+
+    // filter projects by username
+    const filteredProjects = projects.filter(project => project.projectOwner === username);
+
+    // delete projectOwner & data from projects
+    filteredProjects.forEach(project => {
+        delete project.projectOwner;
+        delete project.lastUpdate;
+    });
+
+    // sort project by lastUpdate
+    filteredProjects.sort((a, b) => b.lastUpdate - a.lastUpdate);
+
+    return filteredProjects;
 };

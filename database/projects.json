@@ -1,9 +1,18 @@
 [
     {
-        "username": "user1",
-        "projectName": "Test",
-        "projectDescription": "Test Desc",
-        "projectType": "desktop",
-        "id": 1
+        "projectOwner": "user1",
+        "projectName": "adminTable",
+        "projectDescription": "Test",
+        "projectType": "web",
+        "id": 1,
+        "lastUpdate": "2022-12-11 11:19:42"
+    },
+    {
+        "projectOwner": "user1",
+        "projectName": "Hello world",
+        "projectDescription": "Hello world it the first best project to test",
+        "projectType": "web",
+        "id": 2,
+        "lastUpdate": "2022-12-11 11:21:36"
     }
 ]
