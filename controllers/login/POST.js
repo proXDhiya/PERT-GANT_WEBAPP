@@ -1,7 +1,8 @@
 const { checkAuth } = require('../../modules/users');
 
 const post = (req, res) => {
-    require('../auth/checkauth').checkAuth(req, res);
+    if(require('../auth/checkAuth').checkAuth(req, res))
+        return;
     
     const { username, password } = req.body;
     

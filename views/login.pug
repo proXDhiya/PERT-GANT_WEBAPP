@@ -1,14 +1,11 @@
-include ./components/_head
-include ./components/_header
-include ./components/_form
-include ./components/_msg
+include ./_mixer
 
 //- head implimentation
-+head('Login', '/css/main.css', '/css/login.css')
++head('Login', '/css/main.css')
 body 
     //- header implementation
-    - listHeader = [{name: 'Register', link: '/register'}]
-    +header(false, null, listHeader)
+    - itemHeader = {name: 'Register', link: '/register'}
+    +header(itemHeader)
 
     //- login form
     section

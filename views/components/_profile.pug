@@ -1,0 +1,9 @@
+mixin profile(user)
+    .profile
+        img.profile__avatar(src="/img/profile.png")
+        .profile__name
+            p Username
+            p #{user.username}
+        .profile__date
+            p Join
+            p #{user.dateCreation}

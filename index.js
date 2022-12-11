@@ -35,7 +35,9 @@ app.use(session({
 
 // Configure routes
 app.use('/', require('./routers/login'));
-
+app.use('/dashboard', require('./routers/dashboard'));
+app.use('/logout', require('./routers/logout'));
+app.use('/project', require('./routers/project'));
 
 // Start the server
 const port = process.env.PORT || 3000;

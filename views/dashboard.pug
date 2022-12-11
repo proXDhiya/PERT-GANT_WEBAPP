@@ -1,0 +1,23 @@
+include ./_mixer
+
+//- head implimentation
++head('Login', '/css/main.css', '/css/dashboard.css')
+body
+    //- header implementation
+    - itemHeader = {name: 'Logout', link: '/logout'}
+    +header(itemHeader)
+
+    //- error message implementation
+    if error
+        +msg('error', error)
+    
+    //- seccess message implementation
+    if success
+        +msg('success', success)
+
+    .container
+        .dashboard
+            +profile(user)
+            +dashboardMenu(user)
+
+    +scripts()
