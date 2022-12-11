@@ -6,9 +6,12 @@ mixin dashboardMenu(user)
         .projectsList
             each project in projects || []
                 .project
-                    p= project.projectName
-                    p= project.projectDescription
-                    p= project.projectType
+                    p.project__name= project.projectName
+                    p.project__desc= project.projectDescription
+                    .options
+                        ion-icon(name='create-outline' id=project.id title="Open Project")
+                        ion-icon(name='hammer-outline' id=project.id title="Edit Project")
+                        ion-icon(name='trash-outline' id=project.id title="Delete Project")
 
     .newProject
         h3 New Project
