@@ -1,7 +1,27 @@
 mixin dashboardMenu(user)
-    .menu
-        p.btn New Project
-        ion-icon(name='settings-outline')
-    .projectsList
-        .project
-            
+    .dashboardMenu
+        .menu
+            p#btnNewProject.btn New Project
+            ion-icon(name='settings-outline')
+        .projectsList
+            .project            
+
+    .newProject
+        h3 New Project
+        ion-icon(name='close-outline')
+        form(action="/projects/new" method="POST")
+            .form-group
+                label(for="projectName") Project Name
+                input#projectName.form-control(type="text" name="projectName" placeholder="Project Name")
+            .form-group
+                label(for="projectDescription") Project Description
+                input#projectDescription.form-control(type="text" name="projectDescription" placeholder="Project Description")
+            .form-group
+                label(for="projectType") Project Type
+                select#projectType.form-control(name="projectType")
+                    option(value="1") Web
+                    option(value="2") Mobile
+                    option(value="3") Desktop
+            button.btn(type="submit") Create Project
+
+    script(src="/js/btnNewProject.js") 
