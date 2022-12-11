@@ -9,7 +9,7 @@ mixin dashboardMenu(user)
     .newProject
         h3 New Project
         ion-icon(name='close-outline')
-        form(action="/projects/new" method="POST")
+        form(action="/project/new" method="POST")
             .form-group
                 label(for="projectName") Project Name
                 input#projectName.form-control(type="text" name="projectName" placeholder="Project Name")
