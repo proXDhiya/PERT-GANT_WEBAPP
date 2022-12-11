@@ -1,0 +1,24 @@
+include ./_mixer
+
+//- head implimentation
+- title = 'Project - ' + project.projectName
++head(title, '/css/main.css', '/css/project.css')
+body
+    //- header implementation
+    - itemHeader = {name: 'Dashboard', link: '/dashboard'}
+    +header(itemHeader)
+
+    //- error message implementation
+    if error
+        +msg('error', error)
+    
+    //- seccess message implementation
+    if success
+        +msg('success', success)
+
+    +menu()
+
+    .container
+        .project
+
+    +scripts()    

@@ -1,0 +1,94 @@
+:root {
+    --menu-color: #86d5da;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.menu {
+    height: 75px;
+    background-color: var(--menu-color);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 50px;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.desktop-nav {
+    height: 50px;
+}
+
+
+.menu__list {
+    display: grid;
+    grid-template-columns: 50px repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: var(--spacing-1);
+    height: 100%;
+}
+
+
+.menu__list-icon {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    font-size: 2rem;
+}
+
+
+.menu__list-title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: end;
+    font-size: 1.25rem;
+}
+
+
+.menu__list-desc {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: start;
+    font-size: 0.9rem;
+}
+
+
+.menu__list-options {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: end;
+}
+
+
+.menu__list-options-icon {
+    font-size: 1.4rem;
+    padding: var(--spacing-2);
+    border-radius: 5px;
+    color: #FFF;
+    margin-left: var(--spacing-3);
+    cursor: pointer;
+}
+
+
+.menu__list-options-icon:nth-child(1) {
+    background-color: #cc4a4a;
+}
+
+
+.menu__list-options-icon:nth-child(2) {
+    background-color: #4cb839;
+}
+
+
+.menu__list-options-icon:nth-child(3) {
+    background-color: #4a85cc;
+}
+
+
+.menu__list-options-icon:nth-child(4) {
+    background-color: #cc804a;
+}
