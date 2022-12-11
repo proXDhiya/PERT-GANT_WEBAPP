@@ -156,9 +156,10 @@ body {
 .form {
     margin: var(--spacing-7) auto;
     padding: var(--spacing-5) var(--spacing-6);
-    outline: 2px solid var(--secondary-color);
-    border-radius: 3px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     width: fit-content;
+    background-color: #FFF;
 }
 
 

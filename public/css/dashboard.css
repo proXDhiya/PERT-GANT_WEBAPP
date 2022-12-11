@@ -1,5 +1,6 @@
 .dashboard {
     width: 100%;
+    height: fit-content;
     margin: var(--spacing-7) 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -9,6 +10,8 @@
 
 .profile {
     display: grid;
+    width: 100%;
+    height: fit-content;
     grid-template-columns: 1fr;
     grid-gap: var(--spacing-4);
     border-radius: 15px;
@@ -54,4 +57,35 @@
     .profile__date
 ) > p:last-child {
     color: var(--tertiary-color);
+}
+
+
+.menu {
+    padding-top: var(--spacing-1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: fit-content;
+}
+
+
+.menu > .btn {
+    border-radius: 5px;
+    font-size: 1.1rem;
+    width: fit-content;
+}
+
+
+.menu > ion-icon {
+    justify-self: end;
+    align-self: center;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.menu > ion-icon:hover {
+    color: var(--tertiary-color);
+    rotate: 90deg;
 }
