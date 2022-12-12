@@ -15,7 +15,7 @@
     height: fit-content;
     grid-template-columns: 1fr;
     grid-gap: var(--spacing-4);
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #FFF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -67,7 +67,7 @@
     width: 100%;
     height: fit-content;
     background-color: #FFF;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: var(--spacing-3) var(--spacing-4);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: var(--spacing-5);
@@ -225,7 +225,7 @@
 
 .project {
     background-color: #FFF;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
     padding: var(--spacing-3) var(--spacing-4);
