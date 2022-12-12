@@ -2,14 +2,14 @@ mixin projectInterface(data)
     .container
         .interface
             .interface__options
-                p.interface__options-item.active-options Table
-                p.interface__options-item Pert
-                p.interface__options-item Gantt
+                p#table.interface__options-item.active-options Table
+                p#pert.interface__options-item Pert
+                p#gantt.interface__options-item Gantt
             .interface__content
                 .interface__content-table
                     - rows = 50
                     - cols = 5
-                    - list = ['ID', 'Task Name', 'Time', 'Start Day', 'Tasks Dependence']
+                    - list = ['ID', 'Task Name', 'Time (d)', 'Start Day', 'Tasks Dependence']
                     .table-container
                         table.table__table
                             tr.table__row.table__row-header
@@ -27,3 +27,11 @@ mixin projectInterface(data)
                                                 input.table__cell-input(type="date")
                                             else
                                                 input.table__cell-input(type="text")
+                .interface__content-pert
+                    #pertDiagram
+                .interface__content-gantt
+                                
+    script(src="/js/projectMenu.js")
+    script(src="/js/projectTable.js") 
+    script(src="/js/projectPert.js")
+    script(src="/js/projectGantt.js") 

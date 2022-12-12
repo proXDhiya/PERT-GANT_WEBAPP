@@ -38,5 +38,13 @@
         "projectType": "mobile",
         "id": 5,
         "lastUpdate": "2022-12-12 11:42:21"
+    },
+    {
+        "projectOwner": "user1",
+        "projectName": "Project A",
+        "projectDescription": "TP GL",
+        "projectType": "web",
+        "id": 6,
+        "lastUpdate": "2022-12-12 13:19:3"
     }
 ]

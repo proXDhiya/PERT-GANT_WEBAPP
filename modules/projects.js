@@ -49,8 +49,8 @@ exports.getProjectsByUser = (username) => {
         delete project.lastUpdate;
     });
 
-    // sort project by lastUpdate
-    filteredProjects.sort((a, b) => b.lastUpdate - a.lastUpdate);
+    // sort project by lastUpdate from latest
+    
 
     return filteredProjects;
 };
