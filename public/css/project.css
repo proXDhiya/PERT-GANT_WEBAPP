@@ -152,7 +152,7 @@ body {
 
 
 .interface__content-table {
-    width: 90%;
+    width: fit-content;
     height: 100%;
     padding: var(--spacing-6) 0;
     margin: 0 auto;
@@ -160,8 +160,8 @@ body {
 
 
 .table__table {
-    margin: 0 auto;
-    border: 1px solid var(--primary-color);
+    position: relative;
+    margin-top: 60px;
 }
 
 
@@ -169,6 +169,12 @@ body {
     letter-spacing: .5px;
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size);
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 500px 100px 170px 150px;
+    grid-gap: 2px;
+    top: 230px;
 }
 
 
@@ -178,6 +184,8 @@ body {
     border: 1px solid var(--primary-color);
     background-color: var(--menu-color);
     color: var(--secondary-color);
+    display: grid;
+    align-items: center;
 }
 
 
@@ -204,7 +212,7 @@ body {
 
 
 .table__row > *:nth-child(4) {
-    width: 150px;
+    width: 170px;
 }
 
 
@@ -227,5 +235,28 @@ body {
     border: 1px solid var(--primary-color);
     padding: 0 var(--spacing-2);
     font-weight: var(--font-weight-medium);
+}
 
+
+.table-container {
+    width: 100%;
+    height: calc(100vh - 385px);
+    overflow-y: scroll;
+    margin: 0 auto;
+    outline: 1px solid var(--primary-color);
+}
+
+
+.table-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+.table-container::-webkit-scrollbar-track {
+    background: #FFF;
+}
+
+
+.table-container::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
 }

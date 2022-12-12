@@ -90,6 +90,7 @@ body {
     height: var(--spacing-6);
     background-color: var(--secondary-color);
     color: var(--background-color);
+    z-index: 100;
 }
 
 
