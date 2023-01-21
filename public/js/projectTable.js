@@ -16,17 +16,20 @@ table.addEventListener('change', (e) => {
         row.id = table.children[0].children[i].children[0].innerHTML.split(' ')[4].split('=')[1].split('"')[1]
         row.name = table.children[0].children[i].children[1].firstChild.value;
         row.duration = table.children[0].children[i].children[2].firstChild.value;
-        row.dependsOn = [];
 
         // get the dependencies
         const temp = table.children[0].children[i].children[4].firstChild.value.split(',');
-        for (let j = 0; j < temp.length; j++) {
-            if(parseInt(temp[j]) >= 1 && parseInt(temp[j]) <= 50 && parseInt(temp[j]) != i)
-                row.dependsOn.push(temp[j]);
-            else if (temp[j] != '' || parseInt(temp[j]) == i)
-                console.error(`Invalid dependency: ${temp[j]} in row ${i}`);
-        }
 
+        if(!(temp.length == 1 && temp[0] == '')) {
+            row.dependsOn = [];
+            for (let j = 0; j < temp.length; j++) {
+                if(parseInt(temp[j]) >= 1 && parseInt(temp[j]) <= 50 && parseInt(temp[j]) != i)
+                    row.dependsOn.push(temp[j]);
+                else if (temp[j] != '' || parseInt(temp[j]) == i)
+                    console.error(`Invalid dependency: ${temp[j]} in row ${i}`);
+            }
+        }
+        
         // add row to data object
         if (row.name != '' && row.duration != '')
             TableData.push(row);

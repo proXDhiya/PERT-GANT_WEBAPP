@@ -8,6 +8,6 @@ mixin menu()
                 ion-icon.menu__list-options-icon(name="download-outline" title="Get PDF")
                 - url = "/project/" + project.id + "/save"
                 form(method="POST" action=url style="display: inline-block;")
-                    input.table__save(type="hidden" name="projectData")
+                    input.table__save(type="hidden" name="projectData" value=project.data)
                     button.menu__list-options-button(type="submit" style="display: inline-block; border: none; background: none; padding: 0; margin: 0;")
                         ion-icon.menu__list-options-icon(name="save-outline" title="Save")

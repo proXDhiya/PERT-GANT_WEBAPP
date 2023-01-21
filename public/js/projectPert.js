@@ -1,6 +1,6 @@
 anychart.onDocumentReady(() => {
     // data
-    var data = [];
+    var data = JSON.parse(document.querySelector('.table__save').value);
 
     // create a PERT chart
     chart = anychart.pert();

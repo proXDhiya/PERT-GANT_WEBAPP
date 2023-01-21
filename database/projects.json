@@ -45,18 +45,17 @@
         "projectDescription": "TP GL",
         "projectType": "web",
         "id": 6,
-        "lastUpdate": "2023-1-21 21:35:29",
+        "lastUpdate": "2023-1-21 22:7:3",
         "data": [
             {
                 "id": "1",
-                "name": "Sabrine",
-                "duration": "5",
-                "dependsOn": []
+                "name": "Dhiya",
+                "duration": "5"
             },
             {
                 "id": "2",
-                "name": "Dhiya",
-                "duration": "7",
+                "name": "Sabrine",
+                "duration": "8",
                 "dependsOn": [
                     "1"
                 ]
