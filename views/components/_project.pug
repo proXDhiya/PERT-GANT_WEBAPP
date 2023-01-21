@@ -1,0 +1,40 @@
+mixin projectInterface(data)
+    .container
+        .interface
+            .interface__options
+                p#table.interface__options-item.active-options Table
+                p#pert.interface__options-item Pert
+                p#gantt.interface__options-item Gantt
+            .interface__content
+                .interface__content-table
+                    - rows = 50
+                    - cols = 5
+                    - list = ['ID', 'Task Name', 'Time (d)', 'Start Day', 'Tasks Dependence']
+                    .table-container
+                        table.table__table
+                            tr.table__row.table__row-header
+                                - for (let i = 0; i < cols; i++)
+                                    th.table__cell
+                                        p.table__cell-text
+                                            | #{list[i]}
+                            - for (let i = 0; i < rows; i++)
+                                tr.table__row
+                                    - for (let j = 0; j < cols; j++)
+                                        td.table__cell
+                                            if j % 5 == 0
+                                                input.table__cell-input.table__cell-id(type="number" value=i+1 disabled)
+                                            else if j % 5 == 2
+                                                input.table__cell-input(type="number" min="1")
+                                            else if j % 5 == 3
+                                                input.table__cell-input(type="date")
+                                            else
+                                                input.table__cell-input(type="text")
+                .interface__content-pert
+                    #pertDiagram
+                .interface__content-gantt
+                    #ganttDiagram
+                                
+    script(src="/js/projectMenu.js")
+    script(src="/js/projectTable.js") 
+    script(src="/js/projectPert.js")
+    script(src="/js/projectGantt.js") 

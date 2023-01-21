@@ -1,0 +1,13 @@
+mixin menu()
+    .menu
+        .container.menu__list
+            ion-icon.menu__list-icon(name="folder-open-outline")
+            h3.menu__list-title= project.projectName
+            p.menu__list-desc= project.projectDescription
+            .menu__list-options
+                ion-icon.menu__list-options-icon(name="download-outline" title="Get PDF")
+                - url = "/project/" + project.id + "/save"
+                form(method="POST" action=url style="display: inline-block;")
+                    input.table__save(type="hidden" name="projectData" value=project.data)
+                    button.menu__list-options-button(type="submit" style="display: inline-block; border: none; background: none; padding: 0; margin: 0;")
+                        ion-icon.menu__list-options-icon(name="save-outline" title="Save")

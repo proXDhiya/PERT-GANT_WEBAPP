@@ -30,5 +30,36 @@
         "projectType": "mobile",
         "id": 4,
         "lastUpdate": "2022-12-11 19:18:45"
+    },
+    {
+        "projectOwner": "user1",
+        "projectName": "My Project",
+        "projectDescription": "Test project",
+        "projectType": "mobile",
+        "id": 5,
+        "lastUpdate": "2022-12-12 11:42:21"
+    },
+    {
+        "projectOwner": "user1",
+        "projectName": "Project A",
+        "projectDescription": "TP GL",
+        "projectType": "web",
+        "id": 6,
+        "lastUpdate": "2023-1-21 22:7:3",
+        "data": [
+            {
+                "id": "1",
+                "name": "Dhiya",
+                "duration": "5"
+            },
+            {
+                "id": "2",
+                "name": "Sabrine",
+                "duration": "8",
+                "dependsOn": [
+                    "1"
+                ]
+            }
+        ]
     }
 ]

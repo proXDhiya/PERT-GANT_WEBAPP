@@ -49,8 +49,8 @@ exports.getProjectsByUser = (username) => {
         delete project.lastUpdate;
     });
 
-    // sort project by lastUpdate
-    filteredProjects.sort((a, b) => b.lastUpdate - a.lastUpdate);
+    // sort project by lastUpdate from latest
+    
 
     return filteredProjects;
 };
@@ -70,4 +70,30 @@ exports.getProjectById = (id) => {
 
     // else, return project
     return filteredProjects[0];
+};
+
+
+exports.saveProjectData = (id, data) => {
+    // get projects from file
+    const projects = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/projects.json'), 'utf8'));
+
+    // filter projects by id
+    const filteredProjects = projects.filter(project => project.id == id);
+
+    // if project not found
+    if (filteredProjects.length === 0) {
+        return false;
+    }
+
+    // else, update project data
+    filteredProjects[0].data = JSON.parse(data);
+
+    // last update time format
+    const lastUpdate = new Date();
+    filteredProjects[0].lastUpdate = lastUpdate.getFullYear() + '-' + (lastUpdate.getMonth() + 1) + '-' + lastUpdate.getDate() + ' ' + lastUpdate.getHours() + ':' + lastUpdate.getMinutes() + ':' + lastUpdate.getSeconds();
+
+    // write projects to file
+    fs.writeFileSync(path.join(__dirname, '../database/projects.json'), JSON.stringify(projects, null, 4));
+
+    return true;
 };
