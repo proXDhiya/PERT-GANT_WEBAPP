@@ -1,0 +1,33 @@
+@media print {
+    /* Hide the header and footer */
+    header,
+    footer,
+    nav,
+    .menu__list-options,
+    .interface__options,
+    .table__row-header,
+    .table__row-header::before,
+    .table-container::-webkit-scrollbar,
+    .table-container::-webkit-scrollbar-track,
+    .table-container::-webkit-scrollbar-thumb,
+    .table__row:has(> .table__cell:nth-child(2) > input:placeholder-shown),
+    #ganttDiagram {
+        display: none;
+    }
+
+    .table__table {
+        margin-top: 0;
+    }
+
+    .table-container {
+        height: auto;
+    }
+
+    .table__row:nth-child(17n) {
+        page-break-after: always;
+    }
+
+    .menu {
+        position: relative;
+    }
+}
