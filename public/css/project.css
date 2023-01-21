@@ -283,3 +283,9 @@ body {
     margin: var(--spacing-6);
     height: calc(100vh - 385px);
 }
+
+
+#ganttDiagram {
+    margin: var(--spacing-6);
+    height: calc(100vh - 385px);
+}
