@@ -289,3 +289,14 @@ body {
     margin: var(--spacing-6);
     height: calc(100vh - 385px);
 }
+
+.table__cell-id {
+    text-align: center;
+    padding-left: 20px !important;
+}
+
+.table__cell-id:disabled {
+    background-color: #FFF;
+    color: #000;
+    font-weight: var(--font-weight-bold);
+}
