@@ -45,7 +45,7 @@
         "projectDescription": "TP GL",
         "projectType": "web",
         "id": 6,
-        "lastUpdate": "2023-1-21 22:7:3",
+        "lastUpdate": "2023-1-21 23:30:28",
         "data": [
             {
                 "id": "1",
@@ -58,6 +58,31 @@
                 "duration": "8",
                 "dependsOn": [
                     "1"
+                ]
+            },
+            {
+                "id": "3",
+                "name": "Test",
+                "duration": "20",
+                "dependsOn": [
+                    "1",
+                    "2"
+                ]
+            },
+            {
+                "id": "4",
+                "name": "Huh",
+                "duration": "1",
+                "dependsOn": [
+                    "1"
+                ]
+            },
+            {
+                "id": "5",
+                "name": "Wow",
+                "duration": "4",
+                "dependsOn": [
+                    "4"
                 ]
             }
         ]
