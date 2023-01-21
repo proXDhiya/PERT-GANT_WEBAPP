@@ -45,6 +45,22 @@
         "projectDescription": "TP GL",
         "projectType": "web",
         "id": 6,
-        "lastUpdate": "2022-12-12 13:19:3"
+        "lastUpdate": "2023-1-21 21:35:29",
+        "data": [
+            {
+                "id": "1",
+                "name": "Sabrine",
+                "duration": "5",
+                "dependsOn": []
+            },
+            {
+                "id": "2",
+                "name": "Dhiya",
+                "duration": "7",
+                "dependsOn": [
+                    "1"
+                ]
+            }
+        ]
     }
 ]

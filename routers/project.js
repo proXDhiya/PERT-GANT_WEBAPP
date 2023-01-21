@@ -6,6 +6,9 @@ const router = express.Router();
 // POST /project/new
 router.post('/new', require('../controllers/project/POST_new'));
 
+// POST /project/:id/save
+router.post('/:id/save', require('../controllers/project/POST_id_save'));
+
 // GET /project/:id
 router.get('/:id', require('../controllers/project/GET_id'));
 
