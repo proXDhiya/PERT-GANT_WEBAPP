@@ -38,3 +38,24 @@ table.addEventListener('change', (e) => {
     // save the data in TableSaveTag
     TableSaveTag.value = JSON.stringify(TableData);
 });
+
+
+const parserTable = () => {
+    let data = JSON.parse(TableSaveTag.value) || [];
+
+    for(let i = 1; i <= 50; i++) {
+        if(data[i-1] == undefined)
+            break;
+
+        let id = parseInt(data[i-1].id);
+        let name = data[i-1].name;
+        let duration = data[i-1].duration;
+        let dependsOn = data[i-1].dependsOn || [];
+
+        table.children[0].children[id].children[1].firstChild.value = name;
+        table.children[0].children[id].children[2].firstChild.value = duration;
+        table.children[0].children[id].children[4].firstChild.value = dependsOn.join(',');
+    }
+};
+
+parserTable();
