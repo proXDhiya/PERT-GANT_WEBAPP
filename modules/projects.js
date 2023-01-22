@@ -97,3 +97,23 @@ exports.saveProjectData = (id, data) => {
 
     return true;
 };
+
+
+exports.deleteProjectById = (id) => {
+    // get projects from file
+    const projects = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/projects.json'), 'utf8'));
+
+    // filter projects by id
+    const filteredProjects = projects.filter(project => project.id == id);
+
+    // if project not found
+    if (filteredProjects.length === 0) {
+        return false;
+    }
+
+    // else, delete project
+    projects.splice(projects.indexOf(filteredProjects[0]), 1);
+
+    // write projects to file
+    fs.writeFileSync(path.join(__dirname, '../database/projects.json'), JSON.stringify(projects, null, 4));
+};

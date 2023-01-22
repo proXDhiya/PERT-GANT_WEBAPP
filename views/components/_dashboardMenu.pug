@@ -9,11 +9,13 @@ mixin dashboardMenu(user)
                     p.project__name= project.projectName
                     p.project__desc= project.projectDescription
                     .options
-                        - HrefLink = '/project/' + project.id
-                        a(href=HrefLink)
+                        - HrefLinkOpenProject = '/project/' + project.id
+                        - HrefLinkDeleteProject = '/project/' + project.id + '/delete'
+                        a(href=HrefLinkOpenProject)
                             ion-icon(name='create-outline' id=project.id title="Open Project")
                         ion-icon(name='hammer-outline' id=project.id title="Edit Project")
-                        ion-icon(name='trash-outline' id=project.id title="Delete Project")
+                        a(href=HrefLinkDeleteProject)
+                            ion-icon(name='trash-outline' id=project.id title="Delete Project")
 
     .newProject
         h3 New Project

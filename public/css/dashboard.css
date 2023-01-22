@@ -275,34 +275,34 @@
 }
 
 
-.options > a > ion-icon:nth-child(1) {
+ion-icon[name="create-outline"] {
     background-color: #2dabd2;
 }
 
 
-.options > a > ion-icon:nth-child(1):hover {
+ion-icon[name="create-outline"]:hover {
     background-color: #77cee8;
     color: #1761ac;
 }
 
 
-.options > ion-icon:nth-child(2) {
+ion-icon[name="hammer-outline"] {
     background-color: #f7b924;
 }
 
 
-.options > ion-icon:nth-child(2):hover {
+ion-icon[name="hammer-outline"]:hover {
     background-color: #f7d24a;
     color: #c28f1a;
 }
 
 
-.options > ion-icon:nth-child(3) {
+ion-icon[name="trash-outline"] {
     background-color: #f74e4e;
 }
 
 
-.options > ion-icon:nth-child(3):hover {
+ion-icon[name="trash-outline"]:hover {
     background-color: #f78a8a;
     color: #c21e1e;
 }
