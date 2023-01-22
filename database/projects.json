@@ -37,7 +37,7 @@
         "projectDescription": "TP GL",
         "projectType": "web",
         "id": 6,
-        "lastUpdate": "2023-1-21 23:30:28",
+        "lastUpdate": "2023-1-22 6:12:19",
         "data": [
             {
                 "id": "1",
@@ -46,7 +46,7 @@
             },
             {
                 "id": "2",
-                "name": "Sabrine",
+                "name": "Mow",
                 "duration": "8",
                 "dependsOn": [
                     "1"
