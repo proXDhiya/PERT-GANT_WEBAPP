@@ -35,6 +35,7 @@ app.use(session({
 
 // Configure routes
 app.use('/', require('./routers/login'));
+app.use('/register', require('./routers/register'));
 app.use('/dashboard', require('./routers/dashboard'));
 app.use('/logout', require('./routers/logout'));
 app.use('/project', require('./routers/project'));
