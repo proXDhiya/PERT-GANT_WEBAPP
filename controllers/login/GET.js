@@ -5,7 +5,9 @@ const get = (req, res) => {
     const { error } = req.session;
     delete req.session.error;
     
-    return res.render('login', { error });
+    return res.render('login', {
+        error
+    });
 };
 
 module.exports = get;

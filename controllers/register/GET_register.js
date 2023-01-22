@@ -2,7 +2,12 @@ const get = (req, res) => {
     if(require('../auth/checkAuth').checkAuth(req, res))
         return;
 
-    res.render('register', { title: 'Register' });
+    const { error } = req.session;
+    delete req.session.error;
+
+    res.render('register', {
+        error
+    });
 };
 
 module.exports = get;
