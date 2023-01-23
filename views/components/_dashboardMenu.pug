@@ -2,7 +2,6 @@ mixin dashboardMenu(user)
     .dashboardMenu
         .menu
             p#btnNewProject.btn New Project
-            ion-icon(name='settings-outline')
         .projectsList
             each project in projects || []
                 .project
@@ -13,7 +12,6 @@ mixin dashboardMenu(user)
                         - HrefLinkDeleteProject = '/project/' + project.id + '/delete'
                         a(href=HrefLinkOpenProject)
                             ion-icon(name='create-outline' id=project.id title="Open Project")
-                        ion-icon(name='hammer-outline' id=project.id title="Edit Project")
                         a(href=HrefLinkDeleteProject)
                             ion-icon(name='trash-outline' id=project.id title="Delete Project")
 

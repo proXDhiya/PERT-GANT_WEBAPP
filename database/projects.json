@@ -122,5 +122,51 @@
                 ]
             }
         ]
+    },
+    {
+        "projectOwner": "Anis",
+        "projectName": "Flutter App",
+        "projectDescription": "PFE",
+        "projectType": "mobile",
+        "id": 8,
+        "lastUpdate": "2023-1-22 8:37:28",
+        "data": [
+            {
+                "id": "1",
+                "name": "Init Project",
+                "duration": "1"
+            },
+            {
+                "id": "2",
+                "name": "Build UI",
+                "duration": "4",
+                "dependsOn": [
+                    "1"
+                ]
+            }
+        ]
+    },
+    {
+        "projectOwner": "Khaled",
+        "projectName": "Hello world",
+        "projectDescription": "My First Flutter App",
+        "projectType": "mobile",
+        "id": 9,
+        "lastUpdate": "2023-1-23 21:26:23",
+        "data": [
+            {
+                "id": "1",
+                "name": "Init app",
+                "duration": "4"
+            },
+            {
+                "id": "2",
+                "name": "Build UI",
+                "duration": "8",
+                "dependsOn": [
+                    "1"
+                ]
+            }
+        ]
     }
 ]

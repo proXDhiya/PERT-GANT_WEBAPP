@@ -3,12 +3,24 @@
     "username": "user1",
     "password": "$2a$10$lusnABstaehJQ2mVt3Zgm.4u7njn9IuExq0E9bSc2fKhZagJBzN7e",
     "dateCreation": "3/1/2019",
-    "lastLogin": "1/22/2023, 6:11:17 AM"
+    "lastLogin": "1/23/2023, 9:35:16 PM"
   },
   {
     "username": "Dhiya",
     "password": "$2b$10$IqwSputHOXi15KRei6Y6LesAtUsbqFXAik7PGmoFAdz0KQe60oA7K",
     "dateCreation": "1/22/2023",
     "lastLogin": "1/22/2023, 5:30:37 AM"
+  },
+  {
+    "username": "Anis",
+    "password": "$2b$10$nj9R71CZrQG.9MvV8A5TuOq1NQw.EstJrG/cj5k96c3LtTXgZW44e",
+    "dateCreation": "1/22/2023",
+    "lastLogin": "1/22/2023, 8:33:24 AM"
+  },
+  {
+    "username": "Khaled",
+    "password": "$2b$10$xVY9.pRk4ixwFK7dljIrBuvdC4Y401I7VUVAaBM3RmrpmMUveUzye",
+    "dateCreation": "1/23/2023",
+    "lastLogin": "1/23/2023, 9:22:50 PM"
   }
 ]
